@@ -6,6 +6,7 @@ import config from './config'
 
 export default Router.extend({
   renderPage(page, opts = {layout: true}) {
+    // if requested, wrap page in layout
     if (opts.layout) {
       page = (
         <Layout>
@@ -23,15 +24,21 @@ export default Router.extend({
   },
 
   welcome () {
-    this.renderPage(<MessagePage title='Hello, YourApp' body='This is just a placeholder without layout.'/>, {layout: false})
+    this.renderPage(<MessagePage
+      title='Hello, YourApp' body='This is just a placeholder without layout.'
+    />, {layout: false})
   },
 
   layout () {
-    this.renderPage(<MessagePage title='Hello, YourApp' body='This is just a placeholder with layout.'/>)
+    this.renderPage(<MessagePage
+      title='Hello, YourApp' body='This is just a placeholder with layout.'
+    />, {layout: true})
   },
 
   page404 () {
-    this.renderPage(<MessagePage title="Page not found" body="sorry, please check the URL."/>, {layout: false})
+    this.renderPage(<MessagePage
+      title="Page not found" body="sorry, please check the URL."
+    />, {layout: false})
   }
 
 })
