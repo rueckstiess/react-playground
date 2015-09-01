@@ -1,7 +1,7 @@
 {
-  "name": "react-todomvc",
+  "name": "react-playground",
   "version": "0.1.0",
-  "description": "",
+  "description": "A minimal setup to play with React.js and d3.",
   "main": "index.js",
   "dependencies": {
     "ampersand-app": "^1.0.4",
