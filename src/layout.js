@@ -23,11 +23,11 @@ export default React.createClass({
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="/">YourApp</a>
+              <a className="navbar-brand" href="/">React Playground</a>
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
-                <li><a href="/">Some Link</a></li>
+                <li><a href="/d3">d3 Demo</a></li>
               </ul>
             </div>
           </div>

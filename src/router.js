@@ -2,6 +2,7 @@ import React from 'react'
 import Router from 'ampersand-router'
 import Layout from './layout'
 import MessagePage from './pages/message'
+import D3DemoPage from './pages/d3demo'
 import config from './config'
 
 export default Router.extend({
@@ -14,25 +15,28 @@ export default Router.extend({
         </Layout>
       )
     }
-    React.render(page, document.body);
+    React.render(page, document.body)
   },
 
   routes: {
     '': 'welcome',
-    'layout': 'layout',
+    'd3': 'd3demo',
     '*something': 'page404'
   },
 
   welcome () {
-    this.renderPage(<MessagePage
-      title='Hello, YourApp' body='This is just a placeholder without layout.'
-    />, {layout: false})
+    this.renderPage(
+      <div>
+        <MessagePage
+          title='Welcome to the React Playground'
+          body='Click on the links at the top to look at the different examples.'
+        />
+      </div>
+    , {layout: true})
   },
 
-  layout () {
-    this.renderPage(<MessagePage
-      title='Hello, YourApp' body='This is just a placeholder with layout.'
-    />, {layout: true})
+  d3demo () {
+    this.renderPage(<D3DemoPage/>, {layout: true})
   },
 
   page404 () {
